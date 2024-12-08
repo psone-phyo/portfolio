@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="min-h-screen lg:grid grid-cols-2 mx-[5%] lg:mx-[10%]">
+    <div class="">
+        <div class="lg:grid grid-cols-2 mx-[5%] lg:mx-[10%]">
             <div class="col-spans-1 mx-auto flex justify-center items-center lg:min-h-screen lg:w-full w-8/12 my-5 lg:my-0">
                 <div class=" lg:w-8/12">
                     <img src="../assets/myprofile.jpg" alt="" class="rounded-full bg-sky-900 p-2">
@@ -29,18 +29,25 @@
     <div class="card flex flex-col items-center lg:w-3/4 mx-auto">
       <div 
         v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }" 
-        class="animate-duration-1000"
+        class="animate-duration-1000 mb-5"
       >
-      <SkillPage/>
+      <h1 class="text-3xl font-bold text-sky-900 mb-5">Programming Languages</h1>
       </div>
+      <div 
+        v-animateonscroll="{ enterClass: 'animate-fadein-left', leaveClass: 'animate-fadeout-left' }" 
+        class="animate-duration-1000 "
+      >
+      <DesktopSkillPage class="hidden lg:block"/>
+      <MobileSkillPage class="block lg:hidden"/>
+      </div>
+      
     </div>
-    
-
 </template>
 
 <script setup>
 //page components
-import SkillPage from './SkillsPage.vue'
+import DesktopSkillPage from './Desktop/SkillsPage.vue'
+import MobileSkillPage from './Mobile/SkillsPage.vue'
 
 //primevue
 
@@ -59,10 +66,40 @@ const downloadcv = () => {
 </script>
 
 <style scoped>
+  @keyframes fadein-left {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeout-left {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  
+  .animate-fadein-left {
+    animation: fadein-left 1s ease-out forwards;
+  }
+  
+  .animate-fadeout-left {
+    animation: fadeout-left 1s ease-out forwards;
+  }
+
   @keyframes fadein {
     0% {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
     100% {
       opacity: 1;
@@ -77,7 +114,7 @@ const downloadcv = () => {
     }
     100% {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateY(100%);
     }
   }
   
@@ -87,5 +124,35 @@ const downloadcv = () => {
   
   .animate-fadeout {
     animation: fadeout 1s ease-out forwards;
+  }
+
+  @keyframes fadein-bot {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeout-bot {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  
+  .animate-fadein-bot {
+    animation: fadein-bot 1s ease-out forwards;
+  }
+  
+  .animate-fadeout-bot {
+    animation: fadeout-bot 1s ease-out forwards;
   }
 </style>
