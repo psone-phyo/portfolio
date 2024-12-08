@@ -2,5 +2,23 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import './index.css'
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura'
+import AnimateOnScroll from 'primevue/animateonscroll';
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App);
+app.use(PrimeVue, {
+    theme: {
+        preset: Aura,
+        options: {
+            prefix: 'p',
+            darkModeSelector: 'light',
+            cssLayer: false
+        }
+    }
+});
+
+app.directive('animateonscroll', AnimateOnScroll);
+
+app.use(store).use(router).mount('#app')
