@@ -1,6 +1,6 @@
 
 <template>
-  <div class="card shadow-sm">
+        <div class="card shadow-sm">
       <Menubar :model="items">
           <template #start>
             <Avatar>
@@ -19,7 +19,8 @@
           </template>
       </Menubar>
   </div>
-  <router-view />
+
+  <router-view/>
 </template>
 
 <script setup>
@@ -71,3 +72,9 @@ const items = ref([
   },
 ]);
 </script>
+
+<style scoped>
+template{
+    color: white;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>    
     <div class=" ">
-        <div class="flex justify-evenly items-center gap-5 flex-wrap w-[500px]">
+        <div class="flex justify-center items-center gap-5 flex-wrap w-[500px]">
             <div class="border text-center flex justify-center items-center p-2 rounded-md bg-transparent" :class="lang.color" v-for="(lang, index) in languages" :key="index">
                 <div class="text-3xl">
                     <img :src="lang.lang" alt="" class="w-[80px] rounded-md min-h-[80px]">
@@ -22,7 +22,7 @@ import Bootstrap from '../../assets/bootstrap.svg'
 import Tailwind from '../../assets/tailwindcss.png'
 import MySql from '../../assets/mysql.svg'
 import Vuejs from '../../assets/logo.png'
-
+import Inertia from '../../assets/inertia.jpg'
 
 let languages = ref([
     {lang: HTML, color: 'border-orange-500'},
@@ -34,6 +34,8 @@ let languages = ref([
     {lang: Laravel, color: 'border-red-600'},
     {lang: MySql, color: 'border-gray-500'},
     {lang: Vuejs, color: 'border-green-500'},
+    {lang: Inertia, color: 'border-purple-400'},
+
 ])
 </script>
 

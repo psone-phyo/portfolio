@@ -22,7 +22,7 @@ import Bootstrap from '../../assets/bootstrap.svg'
 import Tailwind from '../../assets/tailwindcss.png'
 import MySql from '../../assets/mysql.svg'
 import Vuejs from '../../assets/logo.png'
-
+import Inertia from '../../assets/inertia.jpg'
 
 let languages = ref([
     {lang: HTML, color: 'border-orange-500'},
@@ -34,9 +34,7 @@ let languages = ref([
     {lang: Laravel, color: 'border-red-600'},
     {lang: MySql, color: 'border-gray-500'},
     {lang: Vuejs, color: 'border-green-500'},
+    {lang: Inertia, color: 'border-purple-300'},
 ])
 </script>
 
-<style lang="stylus" scoped>
-
-</style>
