@@ -4,7 +4,7 @@
       <Menubar :model="items">
           <template #start>
             <Avatar>
-            <img src="./assets/myprofile.jpg" class="w-full rounded-full"/>
+            <img src="./assets/defaultprofile.jpg" class="w-full rounded-full"/>
             </Avatar>
           </template>
 

@@ -3,8 +3,8 @@
     <div class="">
         <div class="lg:grid grid-cols-2 mx-[5%] lg:mx-[10%]">
             <div class="col-spans-1 mx-auto flex justify-center items-center lg:min-h-screen lg:w-full w-8/12 my-5 lg:my-0">
-                <div class=" lg:w-8/12">
-                    <img src="../assets/myprofile.jpg" alt="" class="rounded-full bg-sky-900 p-2">
+                <div class="">
+                    <img src="../assets/defaultprofile.jpg" alt="" class="rounded-full bg-sky-900 p-2">
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
     <!-- languages -->
     <div class="card flex flex-col items-center lg:w-3/4 mx-auto">
       <div 
-        v-animateonscroll="{ enterClass: 'animate-fadein', leaveClass: 'animate-fadeout' }" 
+        v-animateonscroll="{ enterClass: 'animate-fadein-left', leaveClass: 'animate-fadeout-left' }" 
         class="animate-duration-1000 mb-5"
       >
       <h1 class="text-3xl font-bold text-sky-900 mb-5">Programming Languages</h1>
@@ -54,7 +54,23 @@
         <SkillDetails/>
       </div>
     </div> -->
-    <SkillDetails/>
+    <div class="mt-7">
+      <SkillDetails/>
+    </div>
+    
+    <!-- projects -->
+    <div class="mt-10">
+      <div 
+            v-animateonscroll="{ enterClass: 'animate-fadein-left', leaveClass: 'animate-fadeout-left' }" 
+            class="animate-duration-1000 mb-5"
+          >
+          <h1 class="text-3xl font-bold text-sky-900 mb-5 text-center">Projects</h1>
+          </div>
+        <div class="mt-10 animate-duration-1000 mb-5" v-animateonscroll="{ enterClass: 'animate-fadein-left', leaveClass: 'animate-fadeout-left' }">
+          <Projects/>
+        </div>
+
+    </div>
 
 
      
@@ -67,6 +83,8 @@
 import DesktopSkillPage from './Desktop/SkillsPage.vue'
 import MobileSkillPage from './Mobile/SkillsPage.vue'
 import SkillDetails from './Desktop/SkillsDetails.vue'
+import Projects from './Desktop/ProjectsPage.vue'
+
 
 
 //primevue
